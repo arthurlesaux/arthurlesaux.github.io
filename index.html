@@ -1,515 +1,449 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Arthur Le Saux</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=2, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arthur Le Saux - Astrophysicist researching stellar interiors, fluid dynamics, and planetary atmospheres.">
+  <title>Arthur Le Saux | Astrophysics</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .parallax-bg {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+    .lang-btn-active {
+      background-color: #2563eb;
+      color: white;
+    }
+    /* Project card: always show title at bottom, reveal description on hover */
+    .project-card .card-footer {
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+    .project-card:hover .card-overlay {
+      opacity: 1;
+    }
+    .card-overlay {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="./index.html" class="image avatar"><img src="images/me_murex.jpg" alt="" /></a>
-					<h1><strong>Arthur Le Saux</strong></h1>
-                    <h2><p> <a href="mailto:arthur.lesaux@cea.fr">arthur.lesaux@cea.fr</a> </p>
-					Postdoctoral Research Fellow at <a href="https://irfu.cea.fr/dap/index.php">Departement d'Astrophysique, CEA</a>. <br>
-				  Laboratoire de Dynamique des Etoiles, des Exoplanetes et de leur Environnement (<a href="https://irfu.cea.fr/dap/LDEE/index.php"> LDE3</a>).</h2>
-				</div>
-			</header>
+  <!-- Header -->
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-xl font-bold">Arthur Le Saux - Astrophysics</h1>
+      <div class="flex items-center space-x-6">
+        <ul class="hidden md:flex space-x-6 text-sm font-medium">
+          <li><a href="#about" class="hover:text-blue-600" data-i18n="nav_about">About</a></li>
+          <li><a href="#news" class="hover:text-blue-600" data-i18n="nav_news">News</a></li>
+          <li><a href="#research" class="hover:text-blue-600" data-i18n="nav_research">Research</a></li>
+          <li><a href="#publications" class="hover:text-blue-600" data-i18n="nav_publications">Publications</a></li>
+          <li><a href="#projects" class="hover:text-blue-600" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-600" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <div class="flex border rounded-full text-xs overflow-hidden">
+          <button id="lang-en-btn" class="px-3 py-1 lang-btn-active" data-lang="en">EN</button>
+          <button id="lang-fr-btn" class="px-3 py-1" data-lang="fr">FR</button>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-		<!-- Main -->
-			<div id="main">
+  <!-- Hero -->
+  <section class="relative h-screen flex items-center justify-center text-center text-white parallax-bg" style="background-image: url('images/ciel.jpg');">
+    <div class="bg-black bg-opacity-80 p-10 rounded-2xl max-w-3xl">
+      <h2 class="text-5xl font-bold mb-6" data-i18n="hero_title">Arthur Le Saux</h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8" data-i18n="hero_subtitle">
+        Postdoctoral Research Fellow in the Department of Astrophysics of
+        <a href="https://irfu.cea.fr/dap/index.php" class="text-blue-400 hover:underline">CEA Paris-Saclay</a>,
+        Laboratoire de Dynamique des Étoiles, des Exoplanètes et de leur Environnement
+        (<a href="https://irfu.cea.fr/dap/LDEE/index.php" class="text-blue-400 hover:underline">LDE3</a>).
+      </p>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="#publications"
+           class="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 text-lg"
+           data-i18n="hero_cta">See Publications</a>
+        <a href="cv.pdf" target="_blank"
+           class="bg-white text-blue-700 px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 text-lg font-semibold"
+           data-i18n="hero_cv">CV</a>
+      </div>
+    </div>
+  </section>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About</h2>
-						<!-- 	<p> <a href="mailto:al598@exeter.ac.uk">al598@exeter.ac.uk</a> </p> -->
-						</header>
-						<p> As an Astrophysicist, my main research focus on understanding and studying fluid dynamics, and particularly waves and convection, in stellar interiors and planetary atmospheres from a theoretical and numerical point of view.
-								To carry out my research on stellar interiors, I am using the multi-dimensional hydrodynamical fully compresible <a href="www.astro.gsu.edu/~jpratt/music_webpage/music.html">MUSIC</a> code as well as asteroseimic data.
-								I am mostly interested in low mass and intermediate-mass stars, from main-sequence to the asymptotic giant branch.
-								Concerning planetary atmospheres, I am running simulations using the <a href="https://lmdz-forge.lmd.jussieu.fr/mediawiki/Planets/index.php/Overview_of_the_Generic_PCM">Generic Planetary Circulation Model</a> to study the Ice giants, Neptune and Uranus.
-								I am currently a Postdoctoral Research Fellow at the at the <a href="https://irfu.cea.fr/dap/index.php"> Astrophysics Department of CEA-Saclay</a>. Before that, I was a postdoctoral researcher at  <a href="https://www.lmd.jussieu.fr/">LMD/IPSL</a>. </p>
-            <p> I was awarded a PhD from the <a href="http://emps.exeter.ac.uk/physics-astronomy/">University of Exeter</a> in June 2023, supervised by Prof. Isabelle Baraffe and Dr. Thomas Guillet. I obtained a MSc in Astronomy & Astrophysics from Sorbonne Université and Paris Observatory in 2019 and a MEng from Ecole Centrale de Lyon in 2018. </p>
-						<ul class="actions">
-							<li><a href="./CV_Arthur_LE_SAUX.pdf" class="button" target="_blank" rel="noopener noreferrer" >CV</a></li> <li><a href="https://ui.adsabs.harvard.edu/public-libraries/K03LFDKYQXWZVcmf7QuSuA" class="button" target="_blank" rel="noopener noreferrer">Publications</a></li>
-						</ul>
-					</section>
+  <!-- News -->
+  <section id="news" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-semibold mb-10" data-i18n="news_title">News</h3>
+      <ul id="news-list" class="space-y-0"></ul>
+    </div>
+  </section>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Research Projects</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="./waves-MUSIC.html"><img src="images/Vr_krads.001.jpeg" alt="" class="image fit thumb"/></a>
-								<h3><a href=./waves-MUSIC.html>Modelling stellar interiors with MUSIC</a></h3>
-								<p>with Isabelle Baraffe, Thomas Guillet and the MUSIC team.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-					      <a href="./non_linear_inversion.html"><img src="images/NLI.001.jpeg" alt="" class="image fit thumb"/></a>
-								<h3><a href=./non_linear_inversion.html>Non linear inversion for stellar structure</a></h3>
-								<p>with Earl Bellinger and Sarbani Basu.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-									<a href="./identification.html"><img src="images/CNN.001.jpeg" alt="" class="image fit thumb"/></a>
-								<h3><a href=./identification.html>Stellar identification and classification</a></h3>
-								<p>with Lisa Bugnet, Kanah Simth and Rafael A. García.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="./atmospheres.html"><img src="images/venus.001.jpeg" alt="" class="image fit thumb" /></a>
-								<h3><a href=./atmospheres.html>Atmospheric dynamics with the Generic PCM</a></h3>
-								<p>with Sandrine Guerlet, Aymeric Spiga, Jeremy Leconte and the Planeto team.</p>
-							</article>
-							<!--
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						  -->
-						<!--
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-						-->
-					</section>
+  <!-- About -->
+  <section id="about" class="py-20 container mx-auto px-6">
+    <h3 class="text-3xl font-semibold mb-8" data-i18n="about_title">About Me</h3>
+    <div class="flex flex-col md:flex-row gap-10 items-start">
+      <div class="w-full md:w-1/3">
+        <img src="images/me_murex.jpg" alt="Arthur Le Saux" class="rounded-2xl shadow-xl w-full h-auto">
+      </div>
+      <div class="w-full md:w-2/3 flex flex-col gap-6">
+        <p class="text-gray-700 leading-relaxed text-lg" data-i18n="about_text">
+          Arthur Le Saux is specialized in astrophysical fluid dynamics, with a focus on transport processes, waves, and convection in stellar interiors and planetary atmospheres. His research combines nonlinear numerical simulations with theoretical modelling to better understand the internal dynamics of all kinds of star, from low- to high-mass and from the main sequence to the asymptotic giant branch, as well as the circulation of ice giant planets such as Neptune and Uranus. He is particularly interested in bridging stellar hydrodynamical simulations with asteroseismology, using global stellar oscillations to constrain and validate stellar models. He contributes both as a developer and user of the fully compressible, time-implicit MUSIC code for solving the (magneto-)hydrodynamic equations. He is currently a Postdoctoral Research Fellow at CEA Paris-Saclay, following previous research position at LMD/IPSL and a PhD from the University of Exeter.
+        </p>
+        <div>
+          <a href="cv.pdf" target="_blank"
+             class="inline-block bg-blue-600 text-white px-10 py-3 rounded-lg shadow-lg hover:bg-blue-700 text-lg"
+             data-i18n="about_cta">CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-					<!-- Three -->
-						<section id="two">
-							<h2>Artistic Collaboration</h2>
-							<div class="row">
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="./art_collab.html"><img src="images/Love_like_sunset.png" alt="" class="image fit thumb"/></a>
-									<h3><a href=./art_collab.html>Mixing Art with Science</a></h3>
-									<p>with Léo Fourdriner.</p>
-								</article>
-								<!--
-								<article class="col-6 col-12-xsmall work-item">
-						      <a href="./non_linear_inversion.html"><img src="images/NLI.001.jpeg" alt="" class="image fit thumb"/></a>
-									<h3><a href=./non_linear_inversion.html>Non linear inversion for stellar structure</a></h3>
-									<p>with Earl Bellinger, Sarbani Basu and Warrick Ball.</p>
-								</article>
-								<article class="col-6 col-12-xsmall work-item">
-										<a href="./identification.html"><img src="images/CNN.001.jpeg" alt="" class="image fit thumb"/></a>
-									<h3><a href=./identification.html>Stellar identification and classification</a></h3>
-									<p>with Lisa Bugnet, Kanah Simth and Rafael A. García.</p>
-								</article>
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="./venus.html"><img src="images/venus.001.jpeg" alt="" class="image fit thumb" /></a>
-									<h3><a href=./venus.html>Internal gravity waves in Venus atmosphere</a></h3>
-									<p>with Sebastien Lebonnois and Itziar Garate-Lopez.</p>
-								</article>
-							  -->
-							<!--
-							</div>
-							<ul class="actions">
-								<li><a href="#" class="button">Full Portfolio</a></li>
-							</ul>
-							-->
-						</section>
+  <!-- Research -->
+  <section id="research" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-semibold mb-8" data-i18n="research_title">Research Interests</h3>
+      <ul class="space-y-4 list-disc pl-6 text-lg">
+        <li data-i18n="research_item_1">Stellar interiors: convection, waves, and asteroseismology</li>
+        <li data-i18n="research_item_2">Numerical modeling with MUSIC and other codes</li>
+        <li data-i18n="research_item_3">Planetary atmospheres with the Generic Planetary Circulation Model</li>
+        <li data-i18n="research_item_4">Inversion techniques for stellar structures</li>
+      </ul>
+    </div>
+  </section>
 
-				<!-- Four -->
-					<section id="three">
-						<h2>Contact Information</h2>
-						<!-- <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-						-->
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										Laboratoire de Météorologie Dynamique<br />
-                    Institut Pierre Simon Laplace<br />
-										4 place Jussieu<br />
-                    Tower 45-55, 2nd floor<br />
-                    75005 Paris<br />
-										France
-									</li>
-									<li>
-										<!--
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-								-->
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:alesaux@proton.me">alesaux@proton.me</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+  <!-- Publications -->
+  <section id="publications" class="py-20 container mx-auto px-6">
+    <h3 class="text-3xl font-semibold mb-8" data-i18n="pubs_title">Publications</h3>
+    <p class="mb-6 text-lg" data-i18n="pubs_intro">
+      Here are selected recent papers. For a full list, see my
+      <a href="https://ui.adsabs.harvard.edu/user/libraries/K03LFDKYQXWZVcmf7QuSuA" class="text-blue-600 hover:underline">ADS profile</a> or
+      <a href="https://scholar.google.fr/citations?user=w_jPdt4AAAAJ&hl=fr" class="text-blue-600 hover:underline">Google Scholar</a>.
+    </p>
+    <ul class="space-y-4 text-lg" id="pubs-list">
+      <li>
+        Leclerc, A., <strong>Le Saux, A.</strong>, Ong,  J. M. J., García, R. A. (2026).
+        <a href="https://arxiv.org/abs/2607.04830" class="text-blue-600 hover:underline">On the feasibility of inverting the rotation of the solar core with mixed f/g modes</a>,
+        <em>A&A, <strong>Accepted</strong></em>
+      </li>
+      <li>
+        de Vries, N., <strong>Le Saux, A.</strong>, Baraffe, I., Guillet, T., Townsend, R. H. D., Leclerc, A., and Morison, A. (2026).
+        <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae7a3c" class="text-blue-600 hover:underline">Revealing Mixed Modes in Compressible Hydrodynamical Simulations of Red Giant Stars</a>,
+        <em>ApJ, <strong>1005</strong>, 154</em>
+      </li>
+      <li>
+        <strong>Le Saux, A.</strong>, Bessila, L. and Mathis, S. (2026).
+        <a href="https://academic.oup.com/mnras/article/549/1/stag870/8674684" class="text-blue-600 hover:underline">Impact of rotation on the amplitude of acoustic modes in solar-like stars: Insights from hydrodynamical simulations</a>,
+        <em>MNRAS, <strong>549</strong>, 1</em>
+      </li>
+      <li>
+        <strong>Le Saux, A.</strong>, Leclerc, A., Laibe, G., Delplace, P. and Venaille, A. (2025).
+        <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ade396" class="text-blue-600 hover:underline">A Core-sensitive Mixed f/g-mode of the Sun Predicted by Wave Topology and Hydrodynamical Simulation</a>,
+        <em>The Astrophysical Journal Letters, <strong>987</strong>, L12</em>
+      </li>
+      <!-- Add more papers here -->
+    </ul>
+  </section>
 
-				<!-- Five -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-semibold mb-8" data-i18n="projects_title">Projects</h3>
+      <div class="grid md:grid-cols-2 gap-12">
 
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
+        <!-- Card 1 -->
+        <a href="projects/stellar-interiors.html" class="project-card block relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+           style="background-image: url('images/3D_MUSIC_wide.jpeg'); background-size: cover; background-position: center; height: 18rem;">
+          <!-- Always-visible title footer -->
+          <div class="card-footer absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent px-6 py-4">
+            <h4 class="font-semibold text-white text-xl" data-i18n="proj1_title">Modeling Stellar Interiors</h4>
+          </div>
+          <!-- Hover overlay with description -->
+          <div class="card-overlay absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-center items-center text-center">
+            <h4 class="font-semibold text-white text-xl mb-3" data-i18n="proj1_title">Modeling Stellar Interiors</h4>
+            <p class="text-gray-200 text-base mb-4" data-i18n="proj1_text">Numerical simulations with MUSIC to explore convection and waves.</p>
+            <span class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm" data-i18n="proj_learn_more">Learn more →</span>
+          </div>
+        </a>
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
+        <!-- Card 2 -->
+        <a href="projects/planetary-atmospheres.html" class="project-card block relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+           style="background-image: url('images/uranus.jpeg'); background-size: cover; background-position: center; height: 18rem;">
+          <div class="card-footer absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent px-6 py-4">
+            <h4 class="font-semibold text-white text-xl" data-i18n="proj2_title">Dynamics of Giant Planets</h4>
+          </div>
+          <div class="card-overlay absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-center items-center text-center">
+            <h4 class="font-semibold text-white text-xl mb-3" data-i18n="proj2_title">Dynamics of Giant Planets</h4>
+            <p class="text-gray-200 text-base mb-4" data-i18n="proj2_text">Simulations with the Generic PCM to understand circulation in exoplanets.</p>
+            <span class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm" data-i18n="proj_learn_more">Learn more →</span>
+          </div>
+        </a>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
+        <!-- Card 3 -->
+        <a href="projects/stellar-inversions.html" class="project-card block relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+           style="background-image: url('images/kepler.jpg'); background-size: cover; background-position: center; height: 18rem;">
+          <div class="card-footer absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent px-6 py-4">
+            <h4 class="font-semibold text-white text-xl" data-i18n="proj3_title">Asteroseismology</h4>
+          </div>
+          <div class="card-overlay absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-center items-center text-center">
+            <h4 class="font-semibold text-white text-xl mb-3" data-i18n="proj3_title">Asteroseismology</h4>
+            <p class="text-gray-200 text-base mb-4" data-i18n="proj3_text">Using stellar oscillations data to understand their evolution.</p>
+            <span class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm" data-i18n="proj_learn_more">Learn more →</span>
+          </div>
+        </a>
 
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
+        <!-- Card 4 -->
+        <a href="projects/art-science.html" class="project-card block relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+           style="background-image: url('images/Love_like_sunset.png'); background-size: cover; background-position: center; height: 18rem;">
+          <div class="card-footer absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent px-6 py-4">
+            <h4 class="font-semibold text-white text-xl" data-i18n="proj4_title">Mixing Art with Science</h4>
+          </div>
+          <div class="card-overlay absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-center items-center text-center">
+            <h4 class="font-semibold text-white text-xl mb-3" data-i18n="proj4_title">Mixing Art with Science</h4>
+            <p class="text-gray-200 text-base mb-4" data-i18n="proj4_text">An artistic collaboration exploring astrophysical dynamics through visual media.</p>
+            <span class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm" data-i18n="proj_learn_more">Learn more →</span>
+          </div>
+        </a>
 
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
+      </div>
+    </div>
+  </section>
 
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
+  <!-- Contact -->
+  <section id="contact" class="py-20 container mx-auto px-6">
+    <h3 class="text-3xl font-semibold mb-8" data-i18n="contact_title">Contact</h3>
+    <p class="text-lg" data-i18n="contact_email">
+      Email: <a class="text-blue-600">arthur.lesaux .at. cea.fr</a>
+    </p>
+    <p class="text-lg mt-2" data-i18n="contact_affiliation">
+      Affiliation: Astrophysique, Instrumentation, Modélisation (AIM), Department of Astrophysique, CEA Paris-Saclay
+    </p>
+    <div class="flex space-x-6 mt-6 text-lg">
+      <!-- Replace # with your actual profile URLs -->
+      <a href="https://orcid.org/YOUR-ORCID-ID" class="text-blue-600 hover:underline" target="_blank">ORCID</a>
+      <a href="https://scholar.google.fr/citations?user=w_jPdt4AAAAJ&hl=fr" class="text-blue-600 hover:underline" target="_blank">Google Scholar</a>
+      <a href="https://ui.adsabs.harvard.edu/user/libraries/K03LFDKYQXWZVcmf7QuSuA" class="text-blue-600 hover:underline" target="_blank">ADS</a>
+      <a href="https://github.com/YOUR-GITHUB-USERNAME" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
+    </div>
+  </section>
 
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
+  <!-- Footer -->
+  <footer class="bg-gray-200 py-8 text-center text-sm text-gray-600">
+    © 2025 Arthur Le Saux. All rights reserved.
+  </footer>
 
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
+  <script>
+    const translations = {
+      en: {
+        nav_about: "About",
+        nav_news: "News",
+        nav_research: "Research",
+        nav_publications: "Publications",
+        nav_projects: "Projects",
+        nav_contact: "Contact",
 
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
+        hero_title: "Arthur Le Saux",
+        hero_subtitle: `Postdoctoral Research Fellow in the Department of Astrophysics of
+          <a href="https://irfu.cea.fr/dap/index.php" class="text-blue-400 hover:underline">CEA Paris-Saclay</a>,
+          Laboratoire de Dynamique des Étoiles, des Exoplanètes et de leur Environnement
+          (<a href="https://irfu.cea.fr/dap/LDEE/index.php" class="text-blue-400 hover:underline">LDE3</a>).`,
+        hero_cta: "See Publications",
+        hero_cv: "CV",
 
-					</section>
-				-->
+        about_title: "About Me",
+        about_text: "Arthur Le Saux is specialized in astrophysical fluid dynamics, with a focus on transport processes, waves, and convection in stellar interiors and planetary atmospheres. His research combines nonlinear numerical simulations with theoretical modelling to better understand the internal dynamics of all kinds of star, from low- to high-mass and from the main sequence to the asymptotic giant branch, as well as the circulation of ice giant planets such as Neptune and Uranus. He is particularly interested in bridging stellar hydrodynamical simulations with asteroseismology, using global stellar oscillations to constrain and validate stellar models. He contributes both as a developer and user of the fully compressible, time-implicit MUSIC code for solving the (magneto-)hydrodynamic equations. He is currently a Postdoctoral Research Fellow at CEA Paris-Saclay, following previous research positions at LMD/IPSL and a PhD from the University of Exeter.",
+        about_cta: "CV",
 
-			</div>
+        research_title: "Research Interests",
+        research_item_1: "Stellar interiors: convection, waves, and asteroseismology",
+        research_item_2: "Numerical modeling with MUSIC and other codes",
+        research_item_3: "Planetary atmospheres with the Generic Planetary Circulation Model",
+        research_item_4: "Inversion techniques for stellar structures",
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://twitter.com/arthurlsx" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/arthurlesaux" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<!--<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-						<li><a href="mailto:al598@exeter.ac.uk" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						<li><a style="orcid.logo.icon.svg" href="https://orcid.org/0000-0002-6686-7956"><i class="icon orcid.logo.icon.svg"></i> </a></li>
-						<li><a href="https://orcid.org/0000-0002-6686-7956" target=_blank rel=noopener aria-label=orcid><i class="ai ai-orcid big-icon"></i></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Arthur Le Saux</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+        pubs_title: "Publications",
+        pubs_intro: `Here are selected recent papers. For a full list, see my
+          <a href="https://ui.adsabs.harvard.edu/user/libraries/K03LFDKYQXWZVcmf7QuSuA" class="text-blue-600 hover:underline">ADS profile</a> or
+          <a href="https://scholar.google.fr/citations?user=w_jPdt4AAAAJ&hl=fr" class="text-blue-600 hover:underline">Google Scholar</a>.`,
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        projects_title: "Projects",
+        proj1_title: "Modeling Stellar Interiors",
+        proj1_text: "Numerical simulations with MUSIC to explore convection and waves.",
+        proj2_title: "Dynamics of Giant Planets",
+        proj2_text: "Numerical simulations to study the internal dynamics of giant planets and their atmospheres.",
+        proj3_title: "Asteroseismology",
+        proj3_text: "Using stellar oscillations data to understand their evolution.",
+        proj4_title: "Mixing Art with Science",
+        proj4_text: "An artistic collaboration exploring astrophysical dynamics through visual media.",
+        proj_learn_more: "Learn more →",
 
-	</body>
+        contact_title: "Contact",
+        contact_email: `Email: <a class="text-blue-600">arthur.lesaux .at. cea.fr</a>`,
+        contact_affiliation: "Affiliation: Astrophysique, Instrumentation, Modélisation (AIM), Department of Astrophysique, CEA Paris-Saclay",
+        news_title: "News"
+      },
+      fr: {
+        nav_about: "À propos",
+        nav_news: "Actualités",
+        nav_research: "Recherche",
+        nav_publications: "Publications",
+        nav_projects: "Projets",
+        nav_contact: "Contact",
+
+        hero_title: "Arthur Le Saux",
+        hero_subtitle: `Chercheur postdoctoral au Département d'Astrophysique du
+          <a href="https://irfu.cea.fr/dap/index.php" class="text-blue-400 hover:underline">CEA Paris-Saclay</a>,
+          membre du Laboratoire de Dynamique des Étoiles, des Exoplanètes et de leur Environnement
+          (<a href="https://irfu.cea.fr/dap/LDEE/index.php" class="text-blue-400 hover:underline">LDE3</a>).`,
+        hero_cta: "Voir les publications",
+        hero_cv: "CV",
+
+        about_title: "À propos de moi",
+        about_text: "Arthur Le Saux est spécialisé en dynamique des fluides astrophysique, avec un accent particulier sur les processus de transport, les ondes et la convection dans les intérieurs stellaires et les atmosphères planétaires. Ses recherches combinent des simulations numériques non linéaires et la modélisation théorique afin de mieux comprendre la dynamique interne des étoiles et des planètes géantes. Il s'intéresse particulièrement à la mise en relation des simulations hydrodynamiques stellaires avec l'astérosismologie afin de contraindre et de valider les modèles stellaires. Il contribue à la fois en tant que développeur et utilisateur du code MUSIC, entièrement compressible et implicite dans le temps, pour résoudre les équations (magnéto-)hydrodynamiques. Il est actuellement chercheur postdoctoral au CEA Paris-Saclay, après avoir occupé un poste au LMD/IPSL et obtenu un doctorat à l'université d'Exeter.",
+        about_cta: "CV",
+
+        research_title: "Axes de recherche",
+        research_item_1: "Intérieurs stellaires : convection, ondes et astérosismologie",
+        research_item_2: "Modélisation numérique avec MUSIC et d'autres codes",
+        research_item_3: "Atmosphères planétaires avec le Generic Planetary Circulation Model",
+        research_item_4: "Techniques d'inversion pour la structure stellaire",
+
+        pubs_title: "Publications",
+        pubs_intro: `Voici une sélection récente de publications. Pour une liste complète, consultez mon
+          <a href="https://ui.adsabs.harvard.edu/user/libraries/K03LFDKYQXWZVcmf7QuSuA" class="text-blue-600 hover:underline">profil ADS</a> ou
+          <a href="https://scholar.google.fr/citations?user=w_jPdt4AAAAJ&hl=fr" class="text-blue-600 hover:underline">Google Scholar</a>.`,
+
+        projects_title: "Projets",
+        proj1_title: "Modélisation des intérieurs stellaires",
+        proj1_text: "Simulations numériques avec MUSIC pour explorer la convection et les ondes.",
+        proj2_title: "Dynamique des planètes géantes",
+        proj2_text: "Simulations numérique pour etudier la dynamique interne des planètes géantes et de leur atmosphères.",
+        proj3_title: "Asterosismologie",
+        proj3_text: "Utiliser les données sur les oscillations stellaires pour comprendre leur évolution.",
+        proj4_title: "Mêler art et science",
+        proj4_text: "Une collaboration artistique autour de la dynamique astrophysique.",
+        proj_learn_more: "En savoir plus →",
+
+        contact_title: "Contact",
+        contact_email: `Email : <a class="text-blue-600">arthur.lesaux .at. cea.fr</a>`,
+        contact_affiliation: "Affiliation : Astrophysique, Instrumentation, Modélisation (AIM), Département d'Astrophysique, CEA Paris-Saclay",
+        news_title: "Actualités"
+      }
+    };
+
+    // -------------------------------------------------------
+    // NEWS — add your items here. Most recent first.
+    //
+    // Each item:
+    //   date:    "Month YYYY"  (displayed as-is)
+    //   en:      English text  (HTML allowed)
+    //   fr:      French text   (HTML allowed)
+    //   tag:     one of "paper" | "talk" | "award" | "media" | "other"
+    //            (controls the coloured badge on the left)
+    //   link:    optional URL string — wraps the whole item in a link
+    // -------------------------------------------------------
+    const newsItems = [
+      {
+        date: "July 2026",
+        tag: "conf",
+        en: `July 31st : Deadline to submit an abstract for the workshop <em>Waves in Astrophysical Fluids</em> at ISTA (Nov. 9-13th).`,
+        fr: `31 juillet : Dernier jour pour soumettre un abstract pour le workshop <em>Ondes dans les Fluides Astrophysiques</em> à l'ISTA (9-13 Nov.).`,
+        link: "https://waf-2026.ist.ac.at/"
+      },
+      {
+        date: "July 2026",
+        tag: "paper",
+        en: `New paper accepted in <em>Astronomy & Astrophysics</em>: <em>On the feasibility of inverting the rotation of the solar core with mixed f/g modes</em>.`,
+        fr: `Nouvel article accepté dans <em>Astronomy & Astrophysics</em> : <em>On the feasibility of inverting the rotation of the solar core with mixed f/g modes</em>.`,
+        link: "https://arxiv.org/abs/2607.04830"
+      },
+      {
+        date: "June 2026",
+        tag: "paper",
+        en: `New paper published in MNRAS Letters: <em>Impact of rotation on the amplitude of acoustic modes in solar-like stars</em>.`,
+        fr: `Nouvel article publié dans MNRAS Letters : <em>Impact de la rotation sur l'amplitude des modes acoustiques dans les étoiles de type solaire</em>.`,
+        link: "https://academic.oup.com/mnras/article/549/1/stag870/8674684"
+      },
+      {
+        date: "July 2025",
+        tag: "media",
+        en: `Press release from <em>CNRS</em> on recent paper Le Saux et al. (2025, ApJL)`,
+        fr: `Revue de presse du <em>CNRS</em> sur le recent article Le Saux et al. (2025, ApJL)`,
+        link: "https://www.insu.cnrs.fr/fr/cnrsinfo/une-vibration-solaire-inedite-ouvre-une-nouvelle-voie-vers-son-coeur"
+      }, 
+      {
+        date: "June 2025",
+        tag: "paper",
+        en: `New paper published in <em>ApJL</em>: A core-sensitive mixed f/g-mode of the Sun predicted by wave topology and hydrodynamical simulation.`,
+        fr: `Nouvel article publié dans <em>ApJL</em> : Un mode f/g mixte sensible au cœur du Soleil, prédit par la topologie des ondes et des simulations hydrodynamiques.`,
+        link: "https://iopscience.iop.org/article/10.3847/2041-8213/ade396"
+      },     
+      // ---- Add more items below. Copy the block above and edit. ----
+      // {
+      //   date: "Month YYYY",
+      //   tag: "talk",       // paper | talk | award | media | other
+      //   en: "Your English text here.",
+      //   fr: "Votre texte français ici.",
+      //   link: "https://optional-url.com"   // remove this line if no link
+      // },
+    ];
+
+    const tagStyles = {
+      paper:  { bg: "#dbeafe", color: "#1d4ed8", label: { en: "Paper",  fr: "Article" } },
+      conf:   { bg: "#dcfce7", color: "#15803d", label: { en: "Conférence",   fr: "Conférence"  } },
+      award:  { bg: "#fef9c3", color: "#a16207", label: { en: "Award",  fr: "Prix"    } },
+      media:  { bg: "#fce7f3", color: "#9d174d", label: { en: "Media",  fr: "Médias"  } },
+      other:  { bg: "#f3f4f6", color: "#374151", label: { en: "News",   fr: "Actu"    } },
+    };
+
+    function renderNews(lang) {
+      const list = document.getElementById("news-list");
+      list.innerHTML = newsItems.map((item, i) => {
+        const style = tagStyles[item.tag] || tagStyles.other;
+        const badge = `<span style="background:${style.bg}; color:${style.color}; font-size:11px; font-weight:600; padding:2px 9px; border-radius:999px; white-space:nowrap; letter-spacing:0.03em;">${style.label[lang].toUpperCase()}</span>`;
+        const text = item[lang] || item.en;
+        const isLast = i === newsItems.length - 1;
+        const inner = `
+          <div style="display:flex; gap:1.25rem; align-items:baseline; padding:1rem 0; ${isLast ? "" : "border-bottom:1px solid #e5e7eb;"}">
+            <span style="font-size:13px; color:#6b7280; white-space:nowrap; min-width:90px;">${item.date}</span>
+            <div style="display:flex; flex-wrap:wrap; gap:0.5rem; align-items:baseline;">
+              ${badge}
+              <span style="font-size:1rem; color:#1f2937; line-height:1.6;">${text}</span>
+            </div>
+          </div>`;
+        return item.link
+          ? `<li><a href="${item.link}" target="_blank" rel="noopener" style="display:block; text-decoration:none; color:inherit; border-radius:8px; transition:background 0.15s;" onmouseover="this.style.background='#f9fafb'" onmouseout="this.style.background=''">${inner}</a></li>`
+          : `<li>${inner}</li>`;
+      }).join("");
+    }
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        const translation = translations[lang][key];
+        if (translation) el.innerHTML = translation;
+      });
+      renderNews(lang)
+      const enBtn = document.getElementById("lang-en-btn");
+      const frBtn = document.getElementById("lang-fr-btn");
+      if (lang === "en") {
+        enBtn.classList.add("lang-btn-active");
+        frBtn.classList.remove("lang-btn-active");
+      } else {
+        frBtn.classList.add("lang-btn-active");
+        enBtn.classList.remove("lang-btn-active");
+      }
+      localStorage.setItem("lang", lang);
+    }
+
+    document.getElementById("lang-en-btn").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("lang-fr-btn").addEventListener("click", () => setLanguage("fr"));
+
+    // Restore language preference
+    setLanguage(localStorage.getItem("lang") || "en");
+  </script>
+</body>
 </html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planetary Atmosphere Dynamics | Arthur Le Saux</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lang-btn-active { background-color: #2563eb; color: white; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="../index.html" class="text-xl font-bold hover:text-blue-600">← Arthur Le Saux | Astrophysics</a>
+      <div class="flex border rounded-full text-xs overflow-hidden">
+        <button id="lang-en-btn" class="px-3 py-1 lang-btn-active">EN</button>
+        <button id="lang-fr-btn" class="px-3 py-1">FR</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="w-full h-72 md:h-96 bg-cover bg-center" style="background-image: url('../images/venus.001.jpeg');">
+    <div class="w-full h-full bg-black bg-opacity-40 flex items-end">
+      <div class="container mx-auto px-6 pb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-white" data-i18n="proj_title">Planetary Atmosphere Dynamics</h1>
+      </div>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-6 py-16 max-w-4xl">
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="overview_title">Overview</h2>
+      <p class="text-gray-700 leading-relaxed text-lg" data-i18n="overview_text">
+        The Generic Planetary Climate Model is General Climate Model (GCM) developed at LMD/IPSL to model the temporal evolution of planetary atmospheres based on 3D hydrodynamics and realsitic radiatve transfer. As a part of this project, I am working on parametrisation of small scale processes that are not resolved by the grid of the model, such as convection and gravity waves, in the atmospheres of giant planets. I am also aiming to study, from a theoretical and numerical point of view, large-scale gravity waves in the deep atmosphere of Venus.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="details_title">Scientific goals</h2>
+      <ul class="space-y-3 list-disc pl-6 text-lg text-gray-700" data-i18n="details_list">
+        <li>Model large-scale atmospheric circulation in ice giants using the Generic PCM.</li>
+        <li>Understand the role of convection in driving jets and vortices.</li>
+        <li>Compare simulation results with Voyager 2 observations and future ice giant mission targets.</li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="pubs_title">Related publications</h2>
+      <ul class="space-y-3 text-lg">
+      <li>
+        Milcareck, G., Leconte, J., Guerlet, S., <strong>Le Saux, A.</strong>, et al. (2026).
+        <a href="https://ui.adsabs.harvard.edu/abs/2024EPSC...17..875L/abstract" class="text-blue-600 hover:underline">Moist thermal wind balance between zonal jets and the latitudinal methane gradient on Uranus and Neptune</a>,
+        <em>Europlanet Science Congress 2026</em>
+      </li>
+      <li>
+        <strong>Le Saux, A.</strong>, Guerlet, S., Spiga, A., Milcareck, G., Clément, N., and Leconte, J. (2024).
+        <a href="https://ui.adsabs.harvard.edu/abs/2024EPSC...17..875L/abstract" class="text-blue-600 hover:underline">Exploring the atmospheric dynamics of the Ice Giants: A General Circulation Model Approach with a Parametrization of Convection</a>,
+        <em>Europlanet Science Congress 2024</em>
+      </li>
+      </ul>
+    </section>
+
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <a href="../index.html#projects" class="text-blue-600 hover:underline text-lg" data-i18n="back">← Back to all projects</a>
+    </div>
+  </main>
+
+  <footer class="bg-gray-200 py-8 text-center text-sm text-gray-600">
+    © 2025 Arthur Le Saux. All rights reserved.
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        proj_title: "Planetary Atmosphere Dynamics",
+        overview_title: "Overview",
+        overview_text: "The Generic Planetary Climate Model is General Climate Model (GCM) developed at LMD/IPSL to model the temporal evolution of planetary atmospheres based on 3D hydrodynamics and realsitic radiatve transfer. As a part of this project, I am working on parametrisation of small scale processes that are not resolved by the grid of the model, such as convection and gravity waves, in the atmospheres of giant planets. I am also aiming to study, from a theoretical and numerical point of view, large-scale gravity waves in the deep atmosphere of Venus.",
+        details_title: "Scientific goals",
+        details_list: `<li>Model large-scale atmospheric circulation in ice giants using the Generic PCM.</li>
+          <li>Understand the role of convection in driving jets and vortices.</li>
+          <li>Compare simulation results with Voyager 2 observations and future ice giant mission targets.</li>`,
+        pubs_title: "Related publications",
+        pubs_placeholder: "Publications for this project will appear here.",
+        back: "← Back to all projects"
+      },
+      fr: {
+        proj_title: "Dynamique des atmosphères planétaires",
+        overview_title: "Présentation",
+        overview_text: "Le modèle climatique planétaire générique (Generic Planetary Climate Model) est un modèle climatique général (MCG) développé au LMD/IPSL afin de modéliser l’évolution temporelle des atmosphères planétaires à partir d’une hydrodynamique en 3D et d’un transfert radiatif réaliste. Dans le cadre de ce projet, je travaille sur la paramétrisation des processus à petite échelle qui ne sont pas résolus par la maille du modèle, tels que la convection et les ondes de gravité, dans les atmosphères des planètes géantes. Je cherche également à étudier, d'un point de vue théorique et numérique, les ondes de gravité à grande échelle dans les couches profondes de l'atmosphère de Vénus.",
+        details_title: "Objectifs scientifiques",
+        details_list: `<li>Modéliser la circulation atmosphérique à grande échelle des géantes de glace avec le Generic PCM.</li>
+          <li>Comprendre le rôle de la convection dans la formation des jets et des tourbillons.</li>
+          <li>Comparer les résultats des simulations aux observations de Voyager 2 et aux futures missions vers les géantes de glace.</li>`,
+        pubs_title: "Publications liées",
+        pubs_placeholder: "Les publications de ce projet apparaîtront ici.",
+        back: "← Retour aux projets"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+      document.getElementById("lang-en-btn").classList.toggle("lang-btn-active", lang === "en");
+      document.getElementById("lang-fr-btn").classList.toggle("lang-btn-active", lang === "fr");
+      localStorage.setItem("lang", lang);
+    }
+
+    document.getElementById("lang-en-btn").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("lang-fr-btn").addEventListener("click", () => setLanguage("fr"));
+    setLanguage(localStorage.getItem("lang") || "en");
+  </script>
+</body>
+</html>

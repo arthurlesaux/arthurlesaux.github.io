@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asteroseismology | Arthur Le Saux</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lang-btn-active { background-color: #2563eb; color: white; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="../index.html" class="text-xl font-bold hover:text-blue-600">← Arthur Le Saux | Astrophysics</a>
+      <div class="flex border rounded-full text-xs overflow-hidden">
+        <button id="lang-en-btn" class="px-3 py-1 lang-btn-active">EN</button>
+        <button id="lang-fr-btn" class="px-3 py-1">FR</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="w-full h-72 md:h-96 bg-cover bg-center" style="background-image: url('../images/NLI.001.jpeg');">
+    <div class="w-full h-full bg-black bg-opacity-40 flex items-end">
+      <div class="container mx-auto px-6 pb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-white" data-i18n="proj_title">Non-linear Stellar Inversions</h1>
+      </div>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-6 py-16 max-w-4xl">
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="overview_title">Overview</h2>
+      <p class="text-gray-700 leading-relaxed text-lg" data-i18n="overview_text">
+        <!-- FILL IN: Replace with your actual project description. -->
+        Stellar inversion techniques use observed oscillation frequencies to infer the internal structure of stars — for instance, their density or sound speed profiles. This project develops non-linear extensions of classical inversion methods to better constrain stellar models in regimes where linearisation breaks down.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="details_title">Scientific goals</h2>
+      <ul class="space-y-3 list-disc pl-6 text-lg text-gray-700" data-i18n="details_list">
+        <li>Develop non-linear inversion algorithms going beyond the Born approximation.</li>
+        <li>Apply these techniques to Kepler and PLATO targets to constrain stellar ages and compositions.</li>
+        <li>Validate inversion results against hydrodynamical simulations.</li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="pubs_title">Related publications</h2>
+      <p class="text-gray-600 text-lg" data-i18n="pubs_placeholder">Publications for this project will appear here.</p>
+    </section>
+
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <a href="../index.html#projects" class="text-blue-600 hover:underline text-lg" data-i18n="back">← Back to all projects</a>
+    </div>
+  </main>
+
+  <footer class="bg-gray-200 py-8 text-center text-sm text-gray-600">
+    © 2025 Arthur Le Saux. All rights reserved.
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        proj_title: "Asteroseismology",
+        overview_title: "Overview",
+        overview_text: "Asteroseismology is the science of characterizing stars based on their oscillation modes. This project aims to use the frequencies of these oscillations to infer the internal structure of stars (<em>Inversion of Stellar Structure</em>) and their evolutionary stages (<em>Identification and Classification of Pulsating Stars</em>).",
+        details_title: "Scientific goals",
+        details_list: `<li>Develop non-linear extensions of classical inversion methods to better constrain stellar models in regimes where linearisation breaks down.</li>
+          <li>Apply these techniques to Kepler and PLATO targets to constrain stellar ages and compositions.</li>
+          <li>Develop an innovative deep-learning-based methodology used to automatically classify evolved solar-like stars according to their asteroseismic signal.</li>`,
+        pubs_title: "Related publications",
+        pubs_placeholder: "Publications for this project will appear here.",
+        back: "← Back to all projects"
+      },
+      fr: {
+        proj_title: "Asterosismologie",
+        overview_title: "Présentation",
+        overview_text: "L'astérosismologie est la science qui permet de caractériser les étoiles à partir de leurs modes d'oscillation. Ce projet vise à utiliser les fréquences de ces oscillations pour déduire la structure interne des étoiles (<em>Inversion de la structure stellaire</em>) et leurs stades d'évolution (<em>Identification et classification des étoiles pulsantes</em>).",
+        details_title: "Objectifs scientifiques",
+        details_list: `<li>Développer des extensions non linéaires des méthodes d'inversion classiques afin de mieux contraindre les modèles stellaires dans les régimes où la linéarisation ne s'applique plus.</li>
+          <li>Appliquer ces techniques aux cibles Kepler et PLATO pour contraindre les âges et compositions stellaires.</li>
+          <li>Développer une méthodologie innovante fondée sur l'apprentissage profond(<em> Deep Learning</em>), permettant de classer automatiquement les étoiles de type solaire évoluées en fonction de leur signal astérosismique.</li>`,
+        pubs_title: "Publications liées",
+        pubs_placeholder: "Les publications de ce projet apparaîtront ici.",
+        back: "← Retour aux projets"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+      document.getElementById("lang-en-btn").classList.toggle("lang-btn-active", lang === "en");
+      document.getElementById("lang-fr-btn").classList.toggle("lang-btn-active", lang === "fr");
+      localStorage.setItem("lang", lang);
+    }
+
+    document.getElementById("lang-en-btn").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("lang-fr-btn").addEventListener("click", () => setLanguage("fr"));
+    setLanguage(localStorage.getItem("lang") || "en");
+  </script>
+</body>
+</html>

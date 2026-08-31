@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixing Art with Science | Arthur Le Saux</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lang-btn-active { background-color: #2563eb; color: white; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="../index.html" class="text-xl font-bold hover:text-blue-600">← Arthur Le Saux | Astrophysics</a>
+      <div class="flex border rounded-full text-xs overflow-hidden">
+        <button id="lang-en-btn" class="px-3 py-1 lang-btn-active">EN</button>
+        <button id="lang-fr-btn" class="px-3 py-1">FR</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="w-full h-72 md:h-96 bg-cover bg-center" style="background-image: url('../images/Love_like_sunset.png');">
+    <div class="w-full h-full bg-black bg-opacity-40 flex items-end">
+      <div class="container mx-auto px-6 pb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-white" data-i18n="proj_title">Mixing Art with Science</h1>
+      </div>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-6 py-16 max-w-4xl">
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="overview_title">Overview</h2>
+      <p class="text-gray-700 leading-relaxed text-lg" data-i18n="overview_text">
+        <!-- FILL IN: Replace with your actual description of this artistic collaboration. -->
+        This project explores the intersection of astrophysical research and visual art. Scientific data from stellar simulations and hydrodynamic calculations are transformed into visual and multimedia works, inviting a broader audience to engage with the beauty of astrophysical dynamics.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="fast_title">Forum Arts, Sciences et Territoire (FAST)</h2>
+      <p class="text-gray-700 leading-relaxed text-lg" data-i18n="fast_text">
+        <!-- FILL IN: Replace with your actual description of this artistic collaboration. -->
+         FAST aims to blend artistic creation and astrophysics to convey a message of urgency regarding climate change. This second edition of FAST, taking place over one week from October 1 to 8, 2026, will bring together artists, scientists, and the public. Hosted by Le Port des Créateurs in Toulon, 
+         our event will be organized into three parts. A series of lectures focused on popular science related to astrophysics research, as well as the connection between climate change and scientific and artistic research. An exhibition featuring works by artists from Toulon, Marseille, and Paris, 
+         along with images from astronomical research. Workshops for school groups on Thursday, October 1, and Friday, October 2, and for a broader audience (adults and children) for the rest of the week, aimed at raising awareness about artistic creation, climate change, and astronomical research.
+         This year, FAST is part of the program of the <a href="https://www.fetedelascience.fr/forum-arts-sciences-et-territoires" class="text-blue-600 hover:underline">Fête de la Science</a>.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="gallery_title">Gallery</h2>
+      <!-- FILL IN: Add your images or media here. Example below: -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <img src="../images/Love_like_sunset.png" alt="Art piece 1" class="rounded-xl shadow-md w-full h-64 object-cover">
+        <!-- Add more images as needed -->
+      </div>
+    </section>
+
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <a href="../index.html#projects" class="text-blue-600 hover:underline text-lg" data-i18n="back">← Back to all projects</a>
+    </div>
+  </main>
+
+  <footer class="bg-gray-200 py-8 text-center text-sm text-gray-600">
+    © 2025 Arthur Le Saux. All rights reserved.
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        proj_title: "Mixing Art with Science",
+        overview_title: "Overview",
+        overview_text: "I am also deeply involved in outreach activities. This work includes giving public lectures, in both French and English, as well as organizing events (festivals, educational workshops or communcations, art exhibitions, etc.). One topic that interests me greatly is the connection between contemporary art and science, a connection I explore, in particular, through my collaboration with the artist <a href='https://leofourdrinier.fr/' class='text-blue-600 hover:underline'>Léo Fourdrinier</a>. <b>If you’re organizing a public outreach event and think I could be of any help, please don’t hesitate to contact me! </b>",
+        fast_title: "Forum Arts, Sciences et Territoire (FAST)",
+        fast_text: "FAST is an annual event organised by Arthur Le Saux and Léo Fourdrinier. It aims to blend artistic creation and astrophysics to convey a message of urgency regarding climate change. The second edition of FAST, taking place over one week from October 1 to 8, 2026, will bring together artists, scientists, and the public. Hosted by Le Port des Créateurs in Toulon, our event will be organized into three parts. A series of lectures focused on popular science related to astrophysics research, as well as the connection between climate change and scientific and artistic research. An exhibition featuring works by artists from Toulon, Marseille, and Paris,  along with images from astronomical research. Workshops for school groups on Thursday, October 1, and Friday, October 2, and for a broader audience (adults and children) for the rest of the week, aimed at raising awareness about artistic creation, climate change, and astronomical research. This year, FAST is part of the program of the <a href='https://www.fetedelascience.fr/forum-arts-sciences-et-territoires' class='text-blue-600 hover:underline'>Fête de la Science</a>.",
+        gallery_title: "Gallery",
+        back: "← Back to all projects"
+      },
+      fr: {
+        proj_title: "Mêler art et science",
+        overview_title: "Présentation",
+        overview_text: "Je m'implique également beaucoup dans des activités de vulgarisation. Ce travail consiste notamment à donner des conférences publiques, en français et en anglais, ainsi qu'à organiser des événements (festivals, ateliers pédagogiques ou de communication, expositions artistiques, etc.). Un sujet qui m'intéresse particulièrement est le lien entre l'art contemporain et la science, lien que j'explore notamment à travers ma collaboration avec l'artiste <a href='https://leofourdrinier.fr/' class='text-blue-600 hover:underline'>Léo Fourdrinier</a>. <b> Si vous organisez un événement de sensibilisation du grand public et que vous pensez que je pourrais vous être utile, n'hésitez pas à me contacter ! </b>",
+        fast_title: "Forum Arts, Sciences et Territoire (FAST)",
+        fast_text: "FAST est un événement annuel organisé par Arthur Le Saux et Léo Fourdrinier. Il a pour ambition de mêler création artistique et astrophysique afin de porter un message d'urgence face au changement climatique. La deuxième édition du FAST, organisée sur une semaine du 1 au 8 octobre 2026, prendra la forme d'une rencontre entre artistes, scientifiques ainsi que le public. Accueilli par Le Port des Créateurs à Toulon, notre événement sera organisé en trois parties. Un cycle de conférences, ayant pour sujet la vulgarisation scientifique autour de la recherche en astrophysique, ainsi que le lien entre changement climatique et recherche scientifique/ artistique. Une exposition mêlant des œuvres d'artistes de Toulon, de Marseille et de Paris, ainsi que des images de recherches en astronomie. Des ateliers à l'attention d'un public scolaire les jeudi 1er et vendredi 2 octobre et d'un plus large public (adultes et enfants) sur le reste de la semaine, qui ont pour but de sensibiliser à la création artistique, au changement climatique ainsi qu'à la recherche en astronomie. Cette année, FAST intègre le programme de la <a href='https://www.fetedelascience.fr/forum-arts-sciences-et-territoires' class='text-blue-600 hover:underline'>Fête de la Science</a>.",
+        gallery_title: "Galerie",
+        back: "← Retour aux projets"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+      document.getElementById("lang-en-btn").classList.toggle("lang-btn-active", lang === "en");
+      document.getElementById("lang-fr-btn").classList.toggle("lang-btn-active", lang === "fr");
+      localStorage.setItem("lang", lang);
+    }
+
+    document.getElementById("lang-en-btn").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("lang-fr-btn").addEventListener("click", () => setLanguage("fr"));
+    setLanguage(localStorage.getItem("lang") || "en");
+  </script>
+</body>
+</html>

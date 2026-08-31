@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modeling Stellar Interiors | Arthur Le Saux</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lang-btn-active { background-color: #2563eb; color: white; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="../index.html" class="text-xl font-bold hover:text-blue-600">← Arthur Le Saux | Astrophysics</a>
+      <div class="flex border rounded-full text-xs overflow-hidden">
+        <button id="lang-en-btn" class="px-3 py-1 lang-btn-active">EN</button>
+        <button id="lang-fr-btn" class="px-3 py-1">FR</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero image banner -->
+  <div class="w-full h-72 md:h-96 bg-cover bg-center" style="background-image: url('../images/3D_MUSIC.jpeg');">
+    <div class="w-full h-full bg-black bg-opacity-40 flex items-end">
+      <div class="container mx-auto px-6 pb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-white" data-i18n="proj_title">Modeling Stellar Interiors</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="container mx-auto px-6 py-16 max-w-4xl">
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="overview_title">Overview</h2>
+      <p class="text-gray-700 leading-relaxed text-lg" data-i18n="overview_text">
+        <!-- FILL IN: A 2–4 sentence plain-language summary of this project. -->
+        This project uses 2D and 3D numerical simulations of stellar interiors to study convection, internal waves, and their interplay in solar-like and massive stars. The primary tool is the MUSIC code, a fully compressible, time-implicit solver for the (magneto-)hydrodynamic equations.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="details_title">Scientific goals</h2>
+      <ul class="space-y-3 list-disc pl-6 text-lg text-gray-700" data-i18n="details_list">
+        <li>Characterize the excitation and amplitude of internal gravity waves and acoustic modes by turbulent convection.</li>
+        <li>Understand how rotation modifies wave propagation and mode amplitudes in stellar interiors.</li>
+        <li>Connect simulation outputs directly to asteroseismic observables to validate stellar models.</li>
+        <li>Contribute to the development and maintenance of the MUSIC code.</li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4" data-i18n="pubs_title">Related publications</h2>
+      <ul class="space-y-3 text-lg">
+      <li>
+        de Vries, N., <strong>Le Saux, A.</strong>, Baraffe, I., Guillet, T., Townsend, R. H. D., Leclerc, A., and Morison, A. (2026).
+        <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae7a3c" class="text-blue-600 hover:underline">Revealing Mixed Modes in Compressible Hydrodynamical Simulations of Red Giant Stars</a>,
+        <em>ApJ, <strong>1005</strong>, 154</em>
+      </li>
+      <li>
+        <strong>Le Saux, A.</strong>, Bessila, L. and Mathis, S. (2026).
+        <a href="https://academic.oup.com/mnras/article/549/1/stag870/8674684" class="text-blue-600 hover:underline">Impact of rotation on the amplitude of acoustic modes in solar-like stars: Insights from hydrodynamical simulations</a>,
+        <em>MNRAS, <strong>549</strong>, 1</em>
+      </li>
+        <li>
+          <strong>Le Saux, A.</strong>, Leclerc, A., Laibe, G., Delplace, P. and Venaille, A. (2025).
+          <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ade396" class="text-blue-600 hover:underline">
+            A Core-sensitive Mixed f/g-mode of the Sun Predicted by Wave Topology and Hydrodynamical Simulation
+          </a>, <em>ApJL, <strong>987</strong>, L12</em>
+        </li>
+      </ul>
+    </section>
+
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <a href="../index.html#projects" class="text-blue-600 hover:underline text-lg" data-i18n="back">← Back to all projects</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 py-8 text-center text-sm text-gray-600">
+    © 2025 Arthur Le Saux. All rights reserved.
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        proj_title: "Modeling Stellar Interiors",
+        overview_title: "Overview",
+        overview_text: "This project uses 2D and 3D numerical simulations of stellar interiors to study convection, internal waves, and their interplay in solar-like and massive stars. The primary tool is the MUSIC code, a fully compressible, time-implicit solver for the (magneto-)hydrodynamic equations.",
+        details_title: "Scientific goals",
+        details_list: `<li>Characterize the excitation and amplitude of internal gravity waves and acoustic modes by turbulent convection.</li>
+          <li>Understand how rotation modifies wave propagation and mode amplitudes in stellar interiors.</li>
+          <li>Connect simulation outputs directly to asteroseismic observables to validate stellar models.</li>
+          <li>Contribute to the development and maintenance of the MUSIC code.</li>`,
+        pubs_title: "Related publications",
+        back: "← Back to all projects"
+      },
+      fr: {
+        proj_title: "Modélisation des intérieurs stellaires",
+        overview_title: "Présentation",
+        overview_text: "Ce projet utilise des simulations numériques 2D et 3D des intérieurs stellaires pour étudier la convection, les ondes internes et leurs interactions dans les étoiles de type solaire et les étoiles massives. L'outil principal est le code MUSIC, un solveur entièrement compressible et implicite en temps pour les équations (magnéto-)hydrodynamiques.",
+        details_title: "Objectifs scientifiques",
+        details_list: `<li>Caractériser l'excitation et l'amplitude des ondes de gravité internes et des modes acoustiques par la convection turbulente.</li>
+          <li>Comprendre comment la rotation modifie la propagation des ondes et l'amplitude des modes dans les intérieurs stellaires.</li>
+          <li>Connecter les résultats des simulations aux observables astérosismiques pour valider les modèles stellaires.</li>
+          <li>Contribuer au développement et à la maintenance du code MUSIC.</li>`,
+        pubs_title: "Publications liées",
+        back: "← Retour aux projets"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+      document.getElementById("lang-en-btn").classList.toggle("lang-btn-active", lang === "en");
+      document.getElementById("lang-fr-btn").classList.toggle("lang-btn-active", lang === "fr");
+      localStorage.setItem("lang", lang);
+    }
+
+    document.getElementById("lang-en-btn").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("lang-fr-btn").addEventListener("click", () => setLanguage("fr"));
+    setLanguage(localStorage.getItem("lang") || "en");
+  </script>
+</body>
+</html>
